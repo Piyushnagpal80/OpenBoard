@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+}
+
+.tool-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh
+}
+
+.tool{
+    height: 90%;
+    margin-right: 6px;
+}
+.all-tools{
+    height: 100%;
+}
+
+.stickypad{
+    position: absolute;  /*taaki stickypad move ho paaye*/
+    height: 14rem;
+    width: 10rem;
+
+    /* now hmesha kha open hona chaiye stickypad */
+    left: 45vw;
+    top: 35vh;
+    border-radius: 0.8rem;
+    opacity: 0.7;
+}
+
+.nav-bar{
+    border-radius: 0px 15px 0px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color:white;
+    filter: brightness(90%);
+}
+
+/* navbar mai 2 circle chaiye */
+
+.close,.minimize{
+    height: 75%;
+    width: 10%;
+    border-radius: 50%;
+    margin-right: 6px;
+    background-color: red;
+}
+
+.minimize{
+    background-color: lightgreen;
+}
+
+.text-area{
+    height: 85%;
+    width: 100%;
+}
+
+textarea{
+    display: block;
+    height: 100%;
+    width: 99%;
+    border: none;
+    resize: none;
+     outline: none; 
+     background: white;
+     filter: brightness(96%);
+}
