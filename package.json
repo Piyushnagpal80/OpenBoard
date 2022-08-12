@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "OpenBoard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,14 +7,24 @@
     "node": "14.17.3",
     "npm": "6.14.13"
   },
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Piyushnagpal80/OpenBoard.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.1"
-  }
+  "bugs": {
+    "url": "https://github.com/Piyushnagpal80/OpenBoard/issues"
+  },
+  "homepage": "https://github.com/Piyushnagpal80/OpenBoard#readme"
 }
