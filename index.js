@@ -1,16 +1,3 @@
-// const express = require("express");
-
-// const server = express();
-
-// server.use(express.static("public")); //client ko bs ye folder visible hoga
-// // now koi hmare server pr req marega obv browser ke through marega toh browser kya krega iss folder mai dekhege ki index.html hai bs usko parse krke dikha dega
-
-// //obv client/browser ko public folder ke bhaar ka kuch nahi pta hoga kya kya hai server pr not even this file
-
-// server.listen(3000,function(){
-//     console.log("server is running at port 3000")
-// })
-
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -18,7 +5,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-app.use(express.static("public"));
+app.use(express.static("public")); //client ko bs ye folder visible hoga
 
 io.on('connection', (socket) => {
     console.log('a user connected');

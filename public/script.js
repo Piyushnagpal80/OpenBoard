@@ -5,43 +5,18 @@ canvas.width = window.innerWidth;
 // now kuch bhi draw krna hai 2d space mai 
 // // so getcontext ko call krna hoga
 
-const tool = canvas.getContext("2d");  //whhy const we know
+const tool = canvas.getContext("2d");  //why const we know
 
 tool.beginPath();
 
 // //default color black
-tool.fillStyle="white"; //ye phle likho tabhi work krega
+tool.fillStyle="white"; //have to do it here
 tool.fillRect(0,0,canvas.width,canvas.height);
-
-// // tool.fillRect(10,10,canvas.width/2,canvas.height/2);
 
 // // now we know ki tool ka by default color black hota hai
 // // so change kra
 tool.strokeStyle="red";
 tool.lineWidth=5;
-
-// tool.strokeRect(10,10,canvas.width/2,canvas.height/2);
-// tool.fillRect(10,10,canvas.width/2,canvas.height/2);
-
-// tool.beginPath();
-// tool.moveTo(10,10);
-// tool.lineTo(110,110);
-// tool.stroke();
-
-
-// // drawing line between points of mouse press and mouse release
-// canvas.addEventListener("mousedown",function (e){
-//     console.log("mouse down",e.clientX,e.clientY);
-//     tool.beginPath();
-//     tool.moveTo(e.clientX,e.clientY);
-// })
-
-// canvas.addEventListener("mouseup",function (e){
-//     console.log("mouse up",e.clientX,e.clientY);
-//     tool.lineTo(e.clientX,e.clientY);
-//     tool.stroke();
-// })
-
 // //coorinate kese milenge search kiya
 // // mouseclick ka pta lg gya kese milega
 // // ye rha ....      https://stackoverflow.com/questions/23744605/javascript-get-x-and-y-coordinates-on-mouse-click
@@ -64,34 +39,6 @@ tool.lineWidth=5;
 // // but hmen chaiye jha jha mouse move kra vha line draw ho
 
 // // so ek event hota hai mousemove
-
-// let isMousedown= false;
-
-// canvas.addEventListener("mousedown",function(e){
-//     console.log( "mouse down at coordinate", e.clientX,e.clientY );
-//     tool.beginPath();  //pointer origin pr aa gya
-//     tool.moveTo(e.clientX,e.clientY);  //pointer ko clientX,clientY pr move kiya
-//     isMousedown=true;
-// })
-
-// canvas.addEventListener("mousemove",function(e){
-//     //mouse down kro chahe mat kro
-//     // ye run hoga hmesha.. so directly yha pr stroke call nahi kr skte
-//     // so tabhi krenge jab mouseDown true ho
-//     console.log(e.clientX,e.clientY  );
-//     if(isMousedown){
-//         tool.lineTo(e.clientX,e.clientY);
-//         tool.stroke();
-//     }
-// })
-// canvas.addEventListener("mouseup",function(e){
-//     //jab bhi mouse up kiya
-//     // then ab hum chahte hai kuch draw na ho
-//     // so isMousedown ko false kr denge
-//     console.log(e.clientX,e.clientY  );
-//     isMousedown=false;
-// })
-
  // so ab mouse move krenge toh kuch draw nahi hoga
 // phle mouse down krna hoga
  // then jab tak mouse up nahi krte tab tak draw hota rhega acc to mouse movement
@@ -206,74 +153,6 @@ for(var i=0;i<tools.length;i++){
 
 // so hum kya krenge jha jha mouse move kr rha hai uske coordinates ko stickypad ke top and left mai add kr denge
 // so stickypad bhi vese hi move krega phir
-
-
-// let stickypad = document.querySelector(".stickypad");
-
-// // now navbar pr mousedown ho then coordinate chaiye and stickypad bhi tab tak hi move krega jab tak mouseup na krde user
-// let navbar = document.querySelector(".nav-bar");
-
-// let IntiialX=null;
-// let InitialY=null;
-// let isStickypad=false;
-
-// navbar.addEventListener("mousedown",function(e){
-//     IntiialX= e.clientX;
-//     InitialY= e.clientY;
-//     isStickypad=true;
-// })
-
-// canvas.addEventListener("mousemove",function(e){
-//     if(isStickypad){
-//         // now current x,y nikalo
-
-//         let currX = e.clientX;
-//         let currY = e.clientY;
-
-//         // now hmare paas previous x,y hai(initial)
-//         // curr x,y hai
-//         // x,y kitna displace hua nikal lete hai
-//         // then top , left mai utna change kr denge ho jayega kaam
-
-//         const dy = currY-InitialY;
-//         const dx = currX-IntiialX;
-
-//         // now top,left kese nikale stickypad ka .... bound se origin vesse hi toh nikalte thee
-
-//         let {top,left} = stickypad.getBoundingClientRect();
-
-//         stickypad.style.top =  top + dy+"px";
-//         stickypad.style.left = left+dx+"px";
-
-//         IntiialX = currX;
-//         IntiialY = currY;
-//     }
-// })
-
-// window.addEventListener("mouseup",function(e){
-//     isStickypad=false;
-// })
-
-
-// //now close and minimize chalane hai
-
-// let close = document.querySelector(".close");
-// let minimize = document.querySelector(".minimize");
-// let isMinimized=false;
-// let textarea = document.querySelector(".text-area");
-// minimize.addEventListener("click",function(){
-//     if(isMinimized){
-//         textarea.style.display = "block";
-//     }else{
-//         textarea.style.display = "none";
-//     }
-//     isMinimized =! isMinimized;
-// })
-// close.addEventListener("click",function(){
-//     stickypad.remove();  // hatt jayega stickypad
-// })
-
-
 
 // jab bhi stickypad pr click kre toh stickypad bn jaaye ek ye chahte hai
 
